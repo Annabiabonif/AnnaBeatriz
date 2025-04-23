@@ -42,34 +42,40 @@
 <body>
 
   <header class="header">
-    <a href="index.html" class="logo">Anna Beatiz</a>
+    <a href="index.html" class="logo">Anna Beatriz</a>
 
     <nav class="nav">
 
-        <input type="checkbox" class="checkbox" id="checkbox" />
-        <label for="checkbox" class="label-menu">Menu<span class="hamburger"></span></label>
+      <input type="checkbox" class="checkbox" id="checkbox" />
+      <label for="checkbox" class="label-menu">Menu<span class="hamburger"></span></label>
 
-        <ul class="menu">
-            <li class="item-menu"><a href="#inicio">Início</a></li>
-            <li class="item-menu"><a href="#sobre">Sobre</a></li>
-            <li class="item-menu"><a href="#especi">Especialidades</a></li>
-            <li class="item-menu"><a href="contato.html">Contato</a></li>
-            <li><a href="https://www.instagram.com/profbiabonifacio" target="_blank"><i class="bi bi-instagram"></i></a></li>                                           
-            <li><a href="https://br.linkedin.com/in/anna-bonifacio/pt" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-        </ul>
+      <ul class="menu">
+        <li class="item-menu"><a href="#inicio" class="active">Início</a></li>
+        <li class="item-menu"><a href="#sobre">Sobre</a></li>
+        <li class="item-menu"><a href="#especi">Especialidades</a></li>
+        <li class="item-menu"><a href="contato.html">Contato</a></li>
+        <li class="item-menu social-link"><a href="https://www.instagram.com/profbiabonifacio" target="_blank"><i class="bi bi-instagram"></i><span class="social-text">Instagram</span></a></li>
+        <li class="item-menu social-link"><a href="https://br.linkedin.com/in/anna-bonifacio/pt" target="_blank"><i class="bi bi-linkedin"></i><span class="social-text">LinkedIn</span></a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
   <main>
 
     <br><br><br><br><br>
-    <div class="container">
-      <img class="imagem" src="BiaFoto.png" alt="Imagem">
-      <div class="mensagem">Olá!👋🏻 Eu sou Anna Beatriz.</div>
-
-    </div>
-    <br>
-    <button onclick="replaceDocument()" class="btn-contato">Fale Comigo!</button>
+    <section class="container" id="inicio">
+      <div class="ini-txt-div">
+        <span class="subtitulo">Olá!👋🏽</span>
+        <h1 class="titulo">Eu sou Anna Beatriz</h1>
+        <p class="descricao">Professora de Inglês, Português e Espanhol. <br><br></p>
+        <button onclick="replaceDocument()" class="btn-contato">FALE COMIGO</button>
+      </div>
+    
+      <div class="ini-img-div">
+        <img class="imagem" src="BiaFoto.png" alt="Imagem">
+      </div>
+    </section>
+    
 
     <br>
 
@@ -80,7 +86,7 @@
       <br><br><br><br><br><br><br><br><br>
       <!-- section title -->
       <section class="sobre" id="sobre">
-        <h2>Sobre Mim</h2>
+        <h2 class="titulo">Sobre Mim</h2>
 
 
         <style>
@@ -90,6 +96,12 @@
             justify-content: center;
             text-align: center;
             gap: 20px;
+          }
+
+          @media (max-width: 1170px) {
+            .container {
+              flex-direction: column;
+            }
           }
 
           .imagem1 {
@@ -105,7 +117,10 @@
 
         <div class="container">
           <img class="imagem1" src="BiaBoni.png">
-          <p>Meu nome é Anna Beatriz Bonifácio. Falo português, inglês e espanhol com facilidade, o que sempre me ajudou a conhecer <br> novas culturas e pessoas. <br> Me formei em Portugal, onde vivi momentos incríveis e aprendi muito, tanto na vida quanto <br> nos estudos. Essa experiência me tornou quem sou hoje: determinada, curiosa e apaixonada por <br> aprender sempre mais.</p>
+          <p><br><br> Meu nome é Anna Beatriz Bonifácio. Sou uma professora de português, inglês e espanhol <br> e sei falar com facilidade, o que sempre
+            me ajudou a conhecer novas culturas e pessoas. <br> Me formei em Portugal, onde vivi momentos incríveis
+            e aprendi muito, tanto na vida quanto <br> nos estudos. Essa experiência me tornou quem sou hoje:
+            determinada, curiosa e apaixonada por <br> aprender sempre mais.</p>
         </div>
 
       </section>
@@ -145,28 +160,28 @@
 
 
 
-    </main>
+  </main>
 
-    <footer>
-      <div class="interface">
-          <div class="line-footer">
-              <div class="flex">
-                <div class="logo-footer">
-                  <a href="/" class="logo">Anna Beatriz</a>
-              </div>
+  <footer>
+    <div class="interface">
+      <div class="line-footer">
+        <div class="flex">
+          <div class="logo-footer">
+            <a href="/" class="logo">Anna Beatriz</a>
+          </div>
 
-              <div class="btn-social">
-                  <a href="https://br.linkedin.com/in/anna-bonifacio/pt" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
-                  <a href="https://www.instagram.com/profbiabonifacio/?locale=pt_BR&hl=bg" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-              </div>
+          <div class="btn-social">
+            <a href="https://br.linkedin.com/in/anna-bonifacio/pt" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+            <a href="https://www.instagram.com/profbiabonifacio/?locale=pt_BR&hl=bg" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
           </div>
+        </div>
       </div>
-          <div class="line-footer borda">
-              <p><i class="bi bi-envelope-fill"></i><a href="mailto:miguelizgames.paula@gmail.com">Mande um Feedback.</a></p>
-          </div>
+      <div class="line-footer borda">
+        <p><i class="bi bi-envelope-fill"></i><a href="mailto:contatoannabonifacio@gmail.com">contatoannabonifacio@gmail.com</a></p>
       </div>
-  
-  
+    </div>
+
+
   </footer>
 
 
@@ -174,5 +189,43 @@
 
 
   </section>
-  </section>
+
+
+  <script>
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        const checkbox = document.getElementById('checkbox');
+        if (checkbox.checked) {
+          checkbox.checked = false;
+        }
+      });
+    });
+  </script>
+  
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const menuLinks = document.querySelectorAll('.menu a');
+  
+    window.addEventListener('scroll', () => {
+      let current = '';
+  
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120; // margem maior para garantir o cálculo
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+  
+      menuLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  
+    // Ativa o item correto ao carregar a página
+    window.dispatchEvent(new Event('scroll'));
+  </script>
+  
 </body>

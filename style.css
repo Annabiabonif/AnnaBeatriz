@@ -5,8 +5,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     height: 100vh;
     text-align: center;
     color: white;
@@ -19,7 +23,7 @@ body {
 }
 
 .sobre h2 {
-    color: #00ffff;
+    color: #ff00b3;
 }
 
 
@@ -34,80 +38,81 @@ body {
     margin: 0 auto;
 }
 
-/*MENSAGEM ANIMADA*/
-.mensagem {
-    color: #ffffff;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.75rem;
+/* INICIO */
+#inicio{
+    height: 75vh;
+}
 
-    border-right: 5px solid cyan;
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d0d0d;
+    padding: 60px 80px;
+    color: white;
+  }
+  
+  /* Texto do lado esquerdo */
+  .ini-txt-div {
+    max-width: 50%;
+  }
+  
+  /* "Hello World" estilizado */
+  .subtitulo {
+    color: #ff00b3;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  
+  /* Título principal */
+  .titulo {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 400;
+
     white-space: nowrap;
-
-    overflow: hidden;
-
-    width: 0ch;
-
-    animation: mark .5s step-end infinite, write 6s steps(20, end) infinite;
-}
-
-.btn-contato{
-    padding: 15px;
-
-    width: 250px;
-    cursor: pointer;
+  }
+  
+  /* Descrição */
+  .descricao {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  /* Botão verde neon */
+  .btn-contato {
+    background-color: #ff00b3;
     border: none;
-    border-radius: 10rem;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #00ffff;
-
-    transition: .2s;
-}
-
-.btn-contato:hover{
-    box-shadow: 0 0 8px cyan;
+    width: 300px;
+    padding: 15px;
+    font-size: 18pt;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s;
+  }
+  
+  .btn-contato:hover {
+    box-shadow: 0 0 8px #ff00b3;
     transform: scale(1.05);
-}
+  }
+  
+  /* Imagem da direita */
+  .ini-img-div .imagem {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid #ff00b3;
+  }
 
-@media (max-width: 1170px) {
-    .mensagem{
-        animation: none;
-        border-right: none;
-        width: 26ch;
-    }
-}
+  /* INICIO */
 
-@keyframes mark {
-    50% {
-        border-right-color: transparent;
-    }
-}
-
-@keyframes write {
-    20% {
-        width: 23ch;
-    }
-
-    70% {
-        width: 23ch;
-    }
-
-    85% {
-        width: 0;
-    }
-
-    100% {
-        width: 0;
-    }
-}
 
 /*FIM DAS MENSAGENS ANIMADAS*/
 
 /* Estilo do CABEÇALHO */
 
 a{
-    color: var(--white);
     text-decoration: none;
 }
 
@@ -131,6 +136,7 @@ a{
 .logo{
     font-size: 1.5rem;
     font-weight: bold;
+    color:#ff00b3;
 }
 
 .menu{
@@ -149,13 +155,20 @@ a{
     cursor: pointer;
     margin-top: 75px;
 
-    color: #5c5c5c;
+    color: white;
 }
 
 .menu a:hover{
-    color: #fff;
+    color: #ff00b3;
     transform: scale(1.10);
 }
+
+.menu a.active {
+    color: #ff00b3;
+    border-bottom: 2px solid #ff00b3; /* ou outro visual */
+    transform: scale(1.10);
+  }
+  
 
 .label-menu, .checkbox{
     display: none;
@@ -169,8 +182,12 @@ i{
     margin-right: .25rem;
 }
 
+.social-text {
+    display: none;
+    margin-left: 0.5rem;
+  }
 
-@media (max-width: 800px) {
+@media (max-width: 1170px) {
     .menu{
         display: block;
         position: absolute;
@@ -186,6 +203,17 @@ i{
         transition: 0.6s;
 
     }
+
+    .menu a.active {
+        background: #ff00b3;
+        color: #fff;
+        
+      }
+      
+
+    .social-text {
+        display: inline;
+      }
 
     .menu a{
         padding: 1rem;
@@ -253,14 +281,16 @@ i{
 /* sla */
 
 .imagem {
-    width: 250px;
-    height: 250px;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    border: 3px solid #ff00b3;
 }
 
 
 
 .border{
-    border-right: 0.0625rem solid #fff
+    border-right: 0.0625rem solid #fff;
 }
 
 i{
@@ -270,7 +300,7 @@ i{
 
 
 h2.titulo {
-    color: #00ffff;
+    color: #ff00b3;
     text-align: center;
 }
 
@@ -302,7 +332,7 @@ section.especi .flex {
 
 .especi .especialidades-box i {
     font-size: 70px;
-    color: #00ffff
+    color: #ff00b3;
 }
 
 .especi .especialidades-box h3 {
@@ -338,7 +368,7 @@ footer .line-footer{
 }
 
 .borda{
-    border-top: 2px solid cyan;
+    border-top: 2px solid #ff00b3;
 }
 
 .borda i{
@@ -359,7 +389,7 @@ footer .line-footer p a{
     height: 50px;
     border-radius: 50px;
     border: none;
-    background-color: cyan;
+    background-color: #ff00b3;
     font-size: 22px;
     cursor: pointer;
     margin: 0 5px;
@@ -367,7 +397,7 @@ footer .line-footer p a{
 }
 
 .btn-social button:hover{
-    box-shadow: 0 0 8px cyan;
+    box-shadow: 0 0 8px #ff00b3;
     scale: 1.10;
     
 }
